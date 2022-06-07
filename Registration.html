@@ -1,0 +1,142 @@
+<html>
+<head>
+<title>Verification Page</title>
+<script>
+function validate(){
+	if(document.myform.Name.value=="")
+	{
+		alert("Please Enter the Name");
+		document.myform.Name.focus();
+		return false;
+	}
+	if(document.myform.UserID.value=="")
+	{
+		alert("Please Enter the UserID");
+		document.myform.UserID.focus();
+		return false;
+	}
+	if(document.myform.Password.value==""||document.myform.Password.value.length<6)
+	{
+		alert("Please Enter the Password greater than 6 characters");
+		document.myform.Password.focus();
+		return false;
+	}
+	if(document.myform.Email.value=="")
+	{
+		alert("Please Enter the email in format(abc@abc.co.in)");
+		document.myform.Email.focus();
+		return false;
+	}
+	if(document.myform.Address.value=="")
+	{
+		alert("Please Enter the Address");
+		document.myform.Address.focus();
+		return false;
+	}
+	if(document.myform.Zip.value==""||isNaN(document.myform.Zip.value)||document.myform.Zip.value.length!=6)
+	{
+		alert("Please Enter the Zip");
+		document.myform.Zip.focus();
+		return false;
+	}
+	if(document.myform.country.value=="-1")
+	{
+		alert("Please CHOOSE the country");
+		
+		return false;
+	}
+	else
+	return (true)
+}
+</script>
+</head>
+<style type="text/css">
+h1{color:red;font-family: "Algerian", Times, serif;font-size: 40px;}
+body{
+background-image:url("plane1.jpg");
+background-repeat:no-repeat;
+background-size:125%;
+}
+.button{
+background-color:#f44336;}
+</style>
+<body>
+<table width="1000" >
+<tr><th><img src="flight.png" height="100" width="100">
+</th>
+<th>
+<h1><b>&nbsp&nbsp&nbsp&nbsp&nbspAIR ASIA PRIVATE LTD.</b></h1>
+</th>
+</tr>
+</table>
+<center>
+<form method="post" action="BKing.html" name="myform"  onsubmit="return(validate());">
+<table>
+<tr>
+	<th>
+	Name:
+	</th>
+	<td>
+	<input type="text" name="Name" size="20">
+	</td>
+</tr><br></table>	
+<table><tr>
+	<th>
+	User ID:
+	</th>
+	<td>
+	<input type="text" name="UserID" size="20">
+	</td>
+	<th>
+	</tr><br></table>
+<table><tr>
+	<th>
+	Password:
+	</th>
+	<td>
+	<input type="password" name="Password" size="20">
+	</td>
+	<th>
+	</tr><br></table>	
+<table><tr>
+	<th>
+	Email ID:
+	</th>
+	<td>
+	<input type="email" name="Email" size="20" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.co.in$">
+	</td>
+</tr><br></table>
+<table><tr>
+	<th>
+	Address:
+	</th>
+	<td>
+	<input type="text" name="Address" size="20">
+	</td>
+	<th>
+	</tr><br></table>		
+<table><tr>
+	<th>
+	Zip:
+	</th>
+	<td>
+	<input type="number" name="Zip" size="20" maxlength="6">
+	</td>
+</tr>	<br></table>
+<table><tr>
+	<th>
+	Country
+	</th>
+	<td>
+	<select name=country>
+	<option value="-1">CHOOSE</option>
+	<option value="1">INDIA</option>
+	<option value="2">USA</option>
+	<option value="3">UK</option>
+	</td>
+</tr><br></table><br>
+<tr>
+	<td><input type="submit" value="Submit"></td>
+</tr>
+<body>
+<html>

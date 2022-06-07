@@ -1,0 +1,53 @@
+<html>
+<head>
+<style type="text/css">
+h1{color:red;font-family: "Algerian", Times, serif;font-size: 40px;}
+body{
+background-image:url("plane1.jpg");
+background-repeat:no-repeat;
+background-size:125%;
+}
+.button{
+background-color:#f44336;}
+</style>
+<script type="text/javascript">
+function validate()
+{
+	if(document.login.u.value=="admin" && document.login.p.value=="admin")
+	{
+			return (true)
+	}
+			
+	else
+	{
+			alert("Username and Password are incorrect");
+			return  false;
+	}
+	
+	
+}
+</script>
+</head>
+<body>
+<table width="1000" >
+<tr><th><img src="flight.png" height="100" width="100">
+</th>
+<th>
+<h1><b>&nbsp&nbsp&nbsp&nbsp&nbspAIR ASIA PRIVATE LTD.</b></h1>
+</th>
+</table>
+<center>
+<font size="20">
+<h1>Login</h1>
+</font>
+</center>
+<form method="post" name="login"  action="Bking.html" onsubmit="return(validate())">
+<table align="center">
+<tr><th>Enter Username:</th><th><input type=text  name="u"><br></th></tr>
+<tr><th>Enter Passwrod:</th><th><input type=password name="p"></th></tr>
+<tr><th><input type=submit name="btn" value="submit"   ></th>
+<th><input type=button value=CANCEL></th></tr>
+</table>
+</form>
+</body>
+</html>

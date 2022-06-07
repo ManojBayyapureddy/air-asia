@@ -1,0 +1,88 @@
+<html>
+<head>
+<title>Payment Page</title>
+<script type="text/javascript">
+function validate()
+{
+	if(document.pay.check.value!="1")
+	{
+		alert("Please select card type");
+		return false;
+	}
+	else if(document.pay.number.value=="" || document.pay.number.value.length!=16)
+	{
+		alert("Please Enter the 16 digit card Number");
+		document.pay.number.focus();
+		return false;
+	}
+			
+	else if( document.pay.date.value=="")
+	{
+		alert("Please Enter the Validate date correctly");
+		document.pay.date.focus();
+		return false;
+	}
+	else if(document.pay.cvv.value==""|| document.pay.cvv.value.length!=3)
+	{
+		alert("Please Enter the 3 digit CVV number correctly");
+		document.pay.cvv.focus();
+		return false;
+	}
+	else if( document.pay.name.value=="")
+	{
+		alert("Please Enter the Name correctly");
+		document.pay.name.focus();
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+	
+	
+}
+</script>
+</head>
+<style type="text/css">
+h1{color:red;font-family: "Algerian", Times, serif;font-size: 40px;}
+body{
+background-image:url("plane1.jpg");
+background-repeat:no-repeat;
+background-size:125%;
+}
+.button{
+background-color:#f44336;}
+</style>
+<body>
+<table width="1000" >
+<tr><th><img src="flight.png" height="100" width="100">
+</th>
+
+<th>
+<h1><b>&nbsp&nbsp&nbsp&nbsp&nbspAIR ASIA PRIVATE LTD.</b></h1>
+</th>
+</tr>
+</table>
+<center>
+<form method="post" name="pay"  action="Verify.html" onsubmit="return(validate())">
+<table><tr><th>Card Type:</th><td><input type=Radio value="1" name=check>Debit
+										<input type=Radio value="1" name=check>Credit</td></tr></table><br>
+<table><tr>
+<th>Enter Card Number:</th>
+<td> <input type=number name=number></td>
+</tr></table><br>
+<table><tr>
+<th>Validity:</th>
+<td> <input type=date name=date></td>
+<th> CVV:</th> <td><input type=number maxlength="3" name=cvv></td>
+</tr></table><br>
+<table><tr>
+<th>Card Holder Name:</th>
+<td> <input type=text name=name></td>
+</tr></table><br>
+<input type=submit name="btn" value="submit" > 
+</form>
+</center>
+</body>	
+</html>								
+					

@@ -1,0 +1,122 @@
+<html>
+<head>
+<title>Booking Page</title>
+<script type="text/javascript">
+function validate(){
+	if(document.myform.from.value=="-1")
+	{
+		alert("Please CHOOSE Boarding Point");
+		return false;
+	}
+	else if(document.myform.to.value=="-1")
+	{
+		alert("Please CHOOSE Destination Point");
+		return false;
+	}
+	else if(document.myform.date.value=="")
+	{
+		alert("Please Enter the Journey date correctly");
+		document.myform.date.focus();
+		return false;
+	}
+	else if(document.myform.Name.value=="")
+	{
+		alert("Please Enter the Name");
+		document.myform.Name.focus();
+		return false;
+	}
+	else if(document.myform.age.value=="" || document.myform.age.value>100)
+	{
+		alert("Please Enter the Age");
+		document.myform.age.focus();
+		return false;
+	}
+	else if(document.myform.male.value!="1")
+	{
+		alert("Please CHOOSE Gender");
+		return false;
+	}
+	else if(document.myform.proof.value=="-1")
+	{
+		alert("Please CHOOSE ID Proof");
+		return false;
+	}
+	else if(document.myform.ID.value=="")
+	{ 
+		alert("Please Enter ID Number");
+		document.myform.ID.focus();
+		return false;
+	}
+	else if(document.myform.mnumber.value==""||document.myform.mnumber.value.length!=10)
+	{
+		alert("Please Enter valid Mobile Number(10 digits)");
+		document.myform.mnumber.focus();
+		return false;
+	}
+	else
+	{
+	return true;
+	}
+}
+</script>
+</head>
+<style type="text/css">
+h1{color:red;font-family: "Algerian", Times, serif;font-size: 40px;}
+body{
+background-image:url("plane1.jpg");
+background-repeat:no-repeat;
+background-size:125%;
+}
+.button{
+background-color:#f44336;}
+
+</style>
+<body>
+<table width="1000" >
+<tr><th><img src="flight.png" height="100" width="100">
+</th>
+
+<th>
+<h1><b>&nbsp&nbsp&nbsp&nbsp&nbspAIR ASIA PRIVATE LTD.</b></h1>
+</th>
+</tr>
+
+</table>
+<center>
+<form method="post" name="myform" action="Payment.html" onsubmit="return(validate());">
+<table>
+<tr><th>From:<select name=from >
+	<option value="-1">Select</option>
+	<option value="1">Bangalore</option>
+	<option value="2">Chennai</option>
+	<option value="3">Goa</option>
+	<option value="4">Hyderabad</option>
+	<option value="5">Delhi</option></th><br>
+	<th align="right">To:<select name=to>
+	<option value="-1">Select</option>
+	<option value="1">Bangalore</option>
+	<option value="2">Chennai</option>
+	<option value="3">Goa</option>
+	<option value="4">Hyderabad</option>
+	<option value="5">Delhi</option></th></tr>
+	</table><br>
+	<table>
+<tr><th>Date:<input type=date name=date></th></tr></table><br>
+<table><tr><th>Name:</th><td><input type=text name=Name></td></tr></table><br>
+<table><tr><th>Age:</th><td><input type=number name=age></td></tr></table><br>
+<table><tr><th>Gender:</th><td><input type=Radio value="1" name=male>Male
+										<input type=Radio value="1" name=male>Female</td></tr></table><br>
+<table><tr><th>Id Proof:<select name=proof>
+	<option value="-1">Select</option>
+	<option value="1">Aadhar card</option>
+	<option value="2">Driving License</option>
+	<option value="3">Voter Id</option>
+	<option value="4">Pancard</option></th></tr>	</table><br>
+<table><tr><th>Enter Id Number:</th><td><input type=text name=ID></td></tr></table><br>
+<table><tr><th>Mobile Number:</th><td><input type=number name=mnumber></td></tr>	
+</table>	
+<table><tr><th><input type=submit name="btn" value="submit" ></th></tr></table>
+</form>
+</center>
+</body>
+</html>
